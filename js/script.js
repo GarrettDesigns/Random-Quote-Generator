@@ -88,6 +88,10 @@ function getRandomQuote() {
         uniqueQuotes.splice(quoteIndex, 1);
     }
 
+    // This is only for review of the project to ensure quotes don't repeat until
+    // all of them have been seen, ordinarily this would not be in production
+    console.log(randomQuote.quote);
+
     // Return the randomly selected quote for insertion into our markup
     return randomQuote;
 }
