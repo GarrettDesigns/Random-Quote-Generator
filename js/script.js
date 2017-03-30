@@ -102,7 +102,8 @@ var quotes = [{
     quoteIndex,
     randomQuote,
     uniqueQuotes = quotes.slice(), // Make a copy of the quotes array to work with
-    quoteBox = document.getElementById('quote-box'), // Containe the "quote-box" element
+    quoteBox = document.getElementById('quote-box'), // Container for the "quote-box" element
+    loadQuoteButton = document.getElementById("loadQuote"), // Container for the button that triggers quote and background change
 
     // Set up a default quote object to insert when uniqueQuotes is empty 
     // ( see getRandomQuote function )
@@ -182,10 +183,14 @@ function printQuote() {
     quoteBox.innerHTML = quoteString; // set "quote-box" inner html to generated markup on calling printQuote()
 }
 
+// Create function to run parts of our application, so we can only
+// have to call one function below
+function runApplication() {
+    printQuote();
+    setBodyBackground();
+}
+
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById("loadQuote").addEventListener("click", printQuote, false);
-document.getElementById("loadQuote").addEventListener("click", setBodyBackground, false);
-
-window.setInterval(printQuote, 3500);
-window.setInterval(setBodyBackground, 3500);
+loadQuoteButton.addEventListener("click", runApplication, false);
+window.setInterval(runApplication, 3500); // Set application to run every 3.5 secs
