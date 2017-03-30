@@ -5,49 +5,97 @@ var quotes = [{
             'quote': 'Do or do not, there is no try.',
             'source': 'Master Yoda',
             'citation': 'Empire Strikes Back',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
-            'quote': 'I am your father!',
+            'quote': 'I am your father.',
             'source': 'Darth Vader',
             'citation': 'Return of the Jedi',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'These aren\'t the droids you\'re looking for. He can go about his business. Move along.',
             'source': 'Obi Wan Kenobi',
             'citation': 'A New Hope',
-            'year': '1975'
+            'year': '1975',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'Be the change you wish to see in the world.',
             'source': 'Ghandi',
             'citation': '',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'You have to be odd, to be number one',
             'source': 'Dr. Seuss',
             'citation': '',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'Why be moody when you can shake you\'re booty!',
             'source': 'Pinterest',
             'citation': '',
-            'year': 'unknown'
+            'year': 'unknown',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'A negative mind will never give you a positive life.',
             'source': 'Pinterest',
             'citation': '',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
         {
             'quote': 'You will never fail until you stop trying.',
             'source': 'Albert Einstein',
             'citation': '',
-            'year': ''
+            'year': '',
+            'tags': {
+                'category': '',
+                'genre': '',
+                'media_type': '',
+                'popularity_rating': 5
+            }
         },
     ],
 
@@ -64,6 +112,19 @@ var quotes = [{
         'citation': 'Making It All Work',
         'year': '2009'
     };
+
+function getRandomColor() {
+    var hexCodeValues = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += hexCodeValues[Math.floor(Math.random() * hexCodeValues.length)];
+    }
+    return color;
+}
+
+function setBodyBackground() {
+    document.body.style.backgroundColor = getRandomColor();
+}
 
 
 // function using random method of Math object to get a random quote from our quotes object
@@ -124,5 +185,7 @@ function printQuote() {
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById("loadQuote").addEventListener("click", printQuote, false);
+document.getElementById("loadQuote").addEventListener("click", setBodyBackground, false);
 
 window.setInterval(printQuote, 3500);
+window.setInterval(setBodyBackground, 3500);
