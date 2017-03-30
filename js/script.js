@@ -62,7 +62,7 @@ var quotes = [{
             }
         },
         {
-            'quote': 'Why be moody when you can shake you\'re booty!',
+            'quote': 'Why be moody when you can shake your booty!',
             'source': 'Pinterest',
             'citation': '',
             'year': 'unknown',
