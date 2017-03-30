@@ -6,8 +6,8 @@ var quotes = [{
             'source': 'Master Yoda',
             'citation': 'Empire Strikes Back',
             'year': '',
+            'category': 'Movie',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -18,8 +18,8 @@ var quotes = [{
             'source': 'Darth Vader',
             'citation': 'Return of the Jedi',
             'year': '',
+            'category': 'Movie',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -30,8 +30,8 @@ var quotes = [{
             'source': 'Obi Wan Kenobi',
             'citation': 'A New Hope',
             'year': '1975',
+            'category': 'Movie',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -42,8 +42,8 @@ var quotes = [{
             'source': 'Ghandi',
             'citation': '',
             'year': '',
+            'category': 'Inspirational',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -54,8 +54,8 @@ var quotes = [{
             'source': 'Dr. Seuss',
             'citation': '',
             'year': '',
+            'category': 'Inspirational',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -66,8 +66,8 @@ var quotes = [{
             'source': 'Pinterest',
             'citation': '',
             'year': 'unknown',
+            'category': 'Humor',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -78,8 +78,8 @@ var quotes = [{
             'source': 'Pinterest',
             'citation': '',
             'year': '',
+            'category': 'Wisdom',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
@@ -90,8 +90,8 @@ var quotes = [{
             'source': 'Albert Einstein',
             'citation': '',
             'year': '',
+            'category': 'Inspirational',
             'tags': {
-                'category': '',
                 'genre': '',
                 'media_type': '',
                 'popularity_rating': 5
