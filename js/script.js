@@ -1,7 +1,7 @@
 "use strict"; // no monkey business
 
 // Array of objects containing quote data
-var quotes = [{
+const quotes = [{
             'quote': 'Do or do not, there is no try.',
             'source': 'Master Yoda',
             'citation': 'Empire Strikes Back',
@@ -97,22 +97,23 @@ var quotes = [{
                 'popularity_rating': 5
             }
         },
-    ],
+    ];
 
-    quoteIndex,
-    randomQuote,
-    uniqueQuotes = quotes.slice(), // Make a copy of the quotes array to work with
-    quoteBox = document.getElementById('quote-box'), // Container for the "quote-box" element
-    loadQuoteButton = document.getElementById("loadQuote"), // Container for the button that triggers quote and background change
+    const quoteBox = document.getElementById('quote-box'); // Container for the "quote-box" element
+    const loadQuoteButton = document.getElementById("loadQuote"); // Container for the button that triggers quote and background change
 
-    // Set up a default quote object to insert when uniqueQuotes is empty 
+    // Set up a default quote object to insert when uniqueQuotes is empty
     // ( see getRandomQuote function )
-    defaultQuote = {
+    const defaultQuote = {
         'quote': 'You can do anything but not everything',
         'source': 'David Allen',
         'citation': 'Making It All Work',
         'year': '2009'
     };
+
+    let uniqueQuotes = quotes.slice(); // Make a copy of the quotes array to work with
+    let quoteIndex;
+    let randomQuote;
 
 function getRandomColor() {
     var hexCodeValues = '0123456789ABCDEF';
@@ -134,8 +135,7 @@ function getRandomQuote() {
     // If the uniqueQuotes array is empty, recopy the quotes array and fill it back up
     if (!uniqueQuotes.length) {
 
-        // To bridge the gap, populate the html with a default quote so that the button
-        // can't be clicked twice without the quote changing
+        // To bridge the gap, populate the html with a default quote so that the button can't be clicked twice without the quote changing
         randomQuote = defaultQuote;
 
         // Copy the quotes array for manipulation with our script
@@ -149,10 +149,6 @@ function getRandomQuote() {
         // Remove the selected quote from the array
         uniqueQuotes.splice(quoteIndex, 1);
     }
-
-    // This is only for review of the project to ensure quotes don't repeat until
-    // all of them have been seen, ordinarily this would not be in production
-    console.log(randomQuote.quote);
 
     // Return the randomly selected quote for insertion into our markup
     return randomQuote;
@@ -178,7 +174,7 @@ function printQuote() {
         quoteString += '<span class="citation">' + quoteYear + '</span>';
     } // if a year exists create the markup, if not leave it out
 
-    quoteString += '</p>'; // close the quote source p tag 
+    quoteString += '</p>'; // close the quote source p tag
 
     quoteBox.innerHTML = quoteString; // set "quote-box" inner html to generated markup on calling printQuote()
 }
